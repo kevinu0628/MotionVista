@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MotionVista</title>
+  <meta name="description" content="MotionVista: A Unified Framework for Part-Aware Human Motion-Text Alignment" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <h1>MotionVista: A Unified Framework for Part-Aware Human Motion-Text Alignment</h1>
+
+      <div class="authors">
+        Fulong Liu, Liang Xu, Chengqun Yang, Fei Xu, Weili Zeng, Yichao Yan, and Xiaokang Yang
+      </div>
+      <div class="affiliations">
+        <span>Shanghai Jiao Tong University, Shanghai, China</span>
+      </div>
+      <div class="emails">
+        {lfl925884898, ycq0191, fei_xu, yanyichao, xkyang}@sjtu.edu.cn; liangxuy96@gmail.com
+      </div>
+
+      <div class="links">
+        <a href="#" target="_blank" rel="noopener noreferrer">Paper</a>
+        <a href="#" aria-disabled="true">Code (Coming Soon)</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h2>Abstract</h2>
+        <p class="placeholder">
+          Human motion-text alignment aims to establish the semantic correspondence between 3D skeletal motion and natural language, which serves as a foundational capability for both generative and discriminative cross-modal tasks.
+      Since human motion is inherently compositional, existing methods relying on holistic, sequence-level motion granularity often fail to capture the fine-grained part-level kinematic dynamics.
+      Consequently, these approaches are severely limited in downstream applications that require precise cross-modal alignment and part-aware perception.
+      In this paper, we propose MotionVista, a unified part-aware motion-text alignment framework.
+      MotionVista explicitly models body-part articulation and temporal progression via a structured spatial-temporal motion token interface, reorganizing patch-level motion features into global, body-part, and temporal tokens. Powered by this compact interface, the framework is optimized through a progressive global-to-local training strategy, advancing from global captioning to part-aware instruction tuning. Furthermore, the trained model is adapted for motion-text retrieval via instruction-conditioned contrastive learning, successfully bridging generative description and discriminative matching.
+      Extensive experiments demonstrate that MotionVista achieves state-of-the-art performance on global motion captioning and consistently outperforms baselines in part-level motion captioning by robustly grounding localized dynamics. Moreover, it also yields highly competitive motion-text retrieval results without requiring part-level text annotations, confirming that our learned unified alignment representations are intrinsically versatile, discriminative, and transferable.
+        </p>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <h2>Methodology</h2>
+        <div class="figure-stack experiment-stack">
+          <article class="figure-card">
+            <img src="assets/methods/methods_1.png" alt="Method overview figure 1" />
+          </article>
+          <article class="figure-card">
+            <img src="assets/methods/methods_2.png" alt="Method overview figure 2" />
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Experiments</h2>
+        <div class="figure-stack">
+          <article class="figure-card compact">
+            <img src="assets/experiments/exp_1.png" alt="Quantitative result 1" />
+          </article>
+          <article class="figure-card compact">
+            <img src="assets/experiments/exp_2.png" alt="Quantitative result 2" />
+          </article>
+          <article class="figure-card compact">
+            <img src="assets/experiments/exp_3.png" alt="Quantitative result 3" />
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <h2>Qualitative Results</h2>
+        <p class="section-intro">
+          [在这里填写定性结果、可视化样例或视频展示。]
+        </p>
+        <div class="media-placeholder large">[Video / GIF / Image Placeholder]</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>BibTeX</h2>
+        <pre class="bibtex"><code>@article{motionvista2026,
+  title   = {MotionVista: A Unified Framework for Part-Aware Human Motion-Text Alignment},
+  author  = {Fulong Liu and Liang Xu and Chengqun Yang and Fei Xu and Weili Zeng and Yichao Yan and Xiaokang Yang},
+  journal = {[Journal]},
+  year    = {2026}
+}</code></pre>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>[Optional acknowledgment / project note]</p>
+    </div>
+  </footer>
+</body>
+</html>
