@@ -18,12 +18,9 @@
       <div class="affiliations">
         <span>Shanghai Jiao Tong University, Shanghai, China</span>
       </div>
-      <div class="emails">
-        {lfl925884898, ycq0191, fei_xu, yanyichao, xkyang}@sjtu.edu.cn; liangxuy96@gmail.com
-      </div>
 
       <div class="links">
-        <a href="#" target="_blank" rel="noopener noreferrer">Paper</a>
+        <a href="#" aria-disabled="true">Paper</a>
         <a href="#" aria-disabled="true">Code (Coming Soon)</a>
       </div>
     </div>
@@ -47,11 +44,11 @@
     <section class="section alt">
       <div class="container">
         <h2>Methodology</h2>
-        <div class="figure-stack experiment-stack">
+        <div class="figure-stack method-stack">
           <article class="figure-card">
             <img src="assets/methods/methods_1.png" alt="Method overview figure 1" />
           </article>
-          <article class="figure-card">
+          <article class="figure-card method-small">
             <img src="assets/methods/methods_2.png" alt="Method overview figure 2" />
           </article>
         </div>
@@ -61,27 +58,119 @@
     <section class="section">
       <div class="container">
         <h2>Experiments</h2>
-        <div class="figure-stack">
+        <h3 class="subsection-title">Quantitative Results</h3>
+        <div class="figure-stack experiment-stack">
           <article class="figure-card compact">
             <img src="assets/experiments/exp_1.png" alt="Quantitative result 1" />
           </article>
           <article class="figure-card compact">
             <img src="assets/experiments/exp_2.png" alt="Quantitative result 2" />
           </article>
-          <article class="figure-card compact">
+          <article class="figure-card compact experiment-wide">
             <img src="assets/experiments/exp_3.png" alt="Quantitative result 3" />
           </article>
         </div>
-      </div>
-    </section>
 
-    <section class="section alt">
-      <div class="container">
-        <h2>Qualitative Results</h2>
-        <p class="section-intro">
-          [在这里填写定性结果、可视化样例或视频展示。]
-        </p>
-        <div class="media-placeholder large">[Video / GIF / Image Placeholder]</div>
+        <h3 class="subsection-title qualitative-title">Qualitative Results</h3>
+        <h4 class="result-group-title">Global Captioning Results</h4>
+        <div class="video-grid">
+          <article class="video-card">
+            <video controls muted preload="metadata">
+              <source src="assets/demo/M011035_demo.mp4" type="video/mp4" />
+            </video>
+            <div class="caption-pair">
+              <p><strong>Prediction:</strong> a person walks forward, turns around and sits on a chair, then gets up and walks away.</p>
+              <p><strong>Ground-Truth:</strong> a person walks forward, briefly sits down, and then stands and walk back in the opposite direction.</p>
+            </div>
+          </article>
+
+          <article class="video-card">
+            <video controls muted preload="metadata">
+              <source src="assets/demo/005477_demo.mp4" type="video/mp4" />
+            </video>
+            <div class="caption-pair">
+              <p><strong>Prediction:</strong> a person walks forward, bends down to pick up an object and sets it on a table then turns around and walks back.</p>
+              <p><strong>Ground-Truth:</strong> this person walks forward and picks something up then walks back.</p>
+            </div>
+          </article>
+
+          <article class="video-card">
+            <video controls muted preload="metadata">
+              <source src="assets/demo/000629_demo.mp4" type="video/mp4" />
+            </video>
+            <div class="caption-pair">
+              <p><strong>Prediction:</strong> a person walks forward with arms swinging, then turns around and walks back.</p>
+              <p><strong>Ground-Truth:</strong> a man walks forward, turns around and walks back.</p>
+            </div>
+          </article>
+
+          <article class="video-card">
+            <video controls muted preload="metadata">
+              <source src="assets/demo/001983_demo.mp4" type="video/mp4" />
+            </video>
+            <div class="caption-pair">
+              <p><strong>Prediction:</strong> a person walks forward, steps over an object and continues walking.</p>
+              <p><strong>Ground-Truth:</strong> a person walks forward gingerly, then walks to the back of the space and turns around.</p>
+            </div>
+          </article>
+        </div>
+
+        <h4 class="result-group-title part-title">Part-Level Captioning Results</h4>
+        <div class="part-video-grid">
+          <article class="video-card part-card">
+            <video controls muted preload="metadata">
+              <source src="assets/demo/001752_demo.mp4" type="video/mp4" />
+            </video>
+            <div class="part-caption-columns">
+              <div class="part-caption-block">
+                <h5>Ground Truth</h5>
+                <p><strong>Overall:</strong> A person stands still then they throw a football.</p>
+                <p><strong>Right arm:</strong> The right arm is bending from straight to bent when preparing to throw and then extending from bent to straight when releasing the ball.</p>
+                <p><strong>Left arm:</strong> The left arm remains relaxed by the side of the body.</p>
+                <p><strong>Torso:</strong> The torso leans forward slightly during the release of the football, aligning with the direction of the throw.</p>
+                <p><strong>Right leg:</strong> The right leg is stationary, providing balance.</p>
+                <p><strong>Left leg:</strong> The left leg is stationary, providing balance.</p>
+              </div>
+              <div class="part-caption-block">
+                <h5>MotionVista (Ours)</h5>
+                <p><strong>Overall:</strong> A person throws something with their right hand.</p>
+                <p><strong>Right arm:</strong> The right arm is bending from straight to bent when preparing to throw and then extending from bent to straight when releasing the object.</p>
+                <p><strong>Left arm:</strong> The left arm remains relaxed by the side of the body.</p>
+                <p><strong>Torso:</strong> The torso leans forward slightly during the release of the object, aligning with the direction of the throw.</p>
+                <p><strong>Right leg:</strong> The right leg remains stationary, providing balance.</p>
+                <p><strong>Left leg:</strong> The left leg is stationary, providing balance.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="video-card part-card">
+            <video controls muted preload="metadata">
+              <source src="assets/demo/008006_demo.mp4" type="video/mp4" />
+            </video>
+            <div class="part-caption-columns">
+              <div class="part-caption-block">
+                <h5>Ground Truth</h5>
+                <p><strong>Overall:</strong> A person does a threatening crouching walk and then raises their arms.</p>
+                <p><strong>Right arm:</strong> The right arm is bending from straight to bent when crouching and then extending from bent to straight when raising the arms.</p>
+                <p><strong>Left arm:</strong> The left arm is bending from straight to bent when crouching and then extending from bent to straight when raising the arms.</p>
+                <p><strong>Torso:</strong> The torso is leaning forward slightly when crouching and then straightening up when standing.</p>
+                <p><strong>Right leg:</strong> The right leg is bending from straight to bent when crouching and then extending from bent to straight when standing.</p>
+                <p><strong>Left leg:</strong> The left leg is bending from straight to bent when crouching and then extending from bent to straight when standing.</p>
+              </div>
+              <div class="part-caption-block">
+                <h5>MotionVista (Ours)</h5>
+                <p><strong>Overall:</strong> A person walks backwards, bends down to the ground and crawls forward.</p>
+                <p><strong>Right arm:</strong> The right arm is bending from straight to bent when crouching and then extending from bent to straight when crawling.</p>
+                <p><strong>Left arm:</strong> The left arm is bending from straight to bent when crouching down and then extending from bent to straight when crawling forward.</p>
+                <p><strong>Torso:</strong> The torso is leaning forward, lowering the body when crawling and then straightening up when standing.</p>
+                <p><strong>Right leg:</strong> The right leg is bending from straight to bent when crouching down and then extending from bent to straight when crawling forward.</p>
+                <p><strong>Left leg:</strong> The left leg is bending from straight to bent when crouching and then extending from bent to straight when crawling.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p class="details-note">More details can be found in our paper.</p>
       </div>
     </section>
 
