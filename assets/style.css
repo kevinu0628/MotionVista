@@ -250,6 +250,13 @@ h3 {
   justify-self: center;
 }
 
+.experiment-stack .experiment-medium {
+  max-width: 640px;
+  width: min(640px, 90vw);
+  padding: 8px;
+  justify-self: center;
+}
+
 .figure-card {
   background: var(--surface);
   border: 1px solid var(--line);
